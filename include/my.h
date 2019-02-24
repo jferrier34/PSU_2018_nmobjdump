@@ -20,7 +20,11 @@
     # include <sys/mman.h>
     # include <ctype.h>
 
-    void do_all(char *path);
+    /*
+    ** ALL_OBJ_DUMP_FUNCTIONS 
+    */
+
+    void obj(char *path);
     void *try_open_mmap(char *path);
     void choose_by_sort(char *path, void *my_map, Elf32_Ehdr *elf);
     char *choose_flags_two(Elf32_Ehdr *elf);

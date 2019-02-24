@@ -9,8 +9,8 @@ NAME	=	my_objdump
 
 CFLAGS	=	-Wall -Wextra -pedantic
 
-SRC	=	./src/Obj.c		\
-		./src/For_64.c
+SRC	=	./objdump/src/Obj.c		\
+		./objdump/src/64.c
 
 OBJ	=	$(SRC:.c=.o)
 
