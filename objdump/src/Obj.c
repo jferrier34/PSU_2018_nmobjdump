@@ -35,14 +35,18 @@ void choose_by_sort(char *path, void *my_map, Elf32_Ehdr *elf)
     if (elf->e_ident[EI_CLASS] == ELFCLASS32) {
         do_for_32(my_map, path);
     }
-    else // (elf->e_ident[EI_CLASS] == ELFCLASS64) {
+    else
         do_for_64(my_map, path);
-
 }
 
 int main(int ac, char **av)
 {
+    int i = 2;
+    
     if (ac < 2)
         exit(84);
-    obj(av[2]);
+    while (i < ac) {
+        obj(av[i]);
+        ++i;
+    }
 }
